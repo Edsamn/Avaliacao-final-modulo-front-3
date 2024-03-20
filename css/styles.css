@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 20vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#iconHeader {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#headerForm {
+  padding-left: 25px;
+  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+  background-size: 20px;
+  border-radius: 5px;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(28, 58, 25);
+}
+
+main {
+  background-image: url("../assets/FUNDO.jpg");
+  height: 60vh;
+  width: max-content;
+}
+
+footer {
+  height: 20vh;
+  background-color: rgb(28, 58, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#credits {
+  color: gray;
+}
+
+span {
+  color: white;
+  font-weight: bold;
+}
