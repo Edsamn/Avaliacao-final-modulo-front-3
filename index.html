@@ -14,7 +14,8 @@
       </div>
       <h1>API de Rick and Morty</h1>
       <form>
-        <input type="text" id="headerForm" value="Pesquisar" size="43px" />
+        <input type="text" id="headerForm" placeholder="ex.: Morty" size="43px" />
+        <button onclick="getCharactersByName()">Pesquisar</button>
       </form>
       <div id="pageButtons">
         <button class="buttons" id="previousPage" onclick="previousPage()">voltar pág.</button>
@@ -34,6 +35,6 @@
     </footer>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/api.js"></script>
-    <script src="./js/list.js"></script>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>

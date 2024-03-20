@@ -1,4 +1,7 @@
 const characterContainer = document.querySelector(".contentList");
+const prevButton = document.getElementById("previousPage");
+const nextButton = document.getElementById("nextPage");
+const nameValue = document.getElementById("headerForm").value;
 let initialPage = 1;
 
 const renderOnDisplay = (character) => {
@@ -31,16 +34,32 @@ async function getCharacters() {
   try {
     const response = await api.get(`/character?page=${initialPage}`);
     const characters = response.data.results;
-    console.log(characters);
     characters.forEach((character) => {
       renderOnDisplay(character);
-      pageNumber.textContent = `Página atual: ${initialPage}`;
     });
+    pageNumber.textContent = `Página atual: ${initialPage}`;
   } catch (error) {
     console.log(error);
   }
 }
 getCharacters();
+
+async function getCharactersByName() {
+  try {
+    const response = await api.get(`/character?name=${nameValue}`);
+    const characters = response.data.results;
+    console.log(characters);
+    characterContainer.innerHTML = "";
+
+    characters.filter((character) => {
+      character.name.includes(`${nameValue}`).forEach((character) => {
+        renderOnDisplay(character);
+      });
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 function nextPage() {
   initialPage += 1;
