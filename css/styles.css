@@ -2,15 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
-  height: 20vh;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 10px;
 }
 
 #iconHeader {
@@ -28,32 +29,87 @@ header {
   border-radius: 5px;
 }
 
+#pageButtons {
+  display: flex;
+  margin: 10px 0 10px 0;
+  width: 200px;
+  justify-content: space-between;
+}
+
 h1 {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(28, 58, 25);
 }
 
 main {
-  background-image: url("../assets/FUNDO.jpg");
-  height: 60vh;
-  width: max-content;
+  background-image: url(../assets/FUNDO.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-footer {
-  height: 20vh;
-  background-color: rgb(28, 58, 25);
+.contentList {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 }
 
+.userCard {
+  background-color: #224e29;
+  border-radius: 5px;
+  margin: 1rem;
+  width: 400px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.userCard img {
+  height: 230px;
+  width: 170px;
+  border-radius: 5px;
+}
+
+.userCardImage {
+  display: flex;
+  justify-content: stretch;
+}
+
+.userCardText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.userCard p,
+h3 {
+  margin: 0.5rem 0;
+  color: white;
+}
+
+.userCard span,
 #credits {
   color: gray;
 }
 
-span {
+footer {
+  background-color: rgb(28, 58, 25);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+#pageNumber {
+  margin: 10px 0 10px 0;
+  color: gray;
+}
+
+#credits span {
   color: white;
   font-weight: bold;
 }

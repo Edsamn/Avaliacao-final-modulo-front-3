@@ -16,9 +16,20 @@
       <form>
         <input type="text" id="headerForm" value="Pesquisar" size="43px" />
       </form>
+      <div id="pageButtons">
+        <button class="buttons" id="previousPage" onclick="previousPage()">voltar pág.</button>
+        <button class="buttons" id="nextPage" onclick="nextPage()">próx. pág.</button>
+      </div>
     </header>
-    <main></main>
+    <main>
+      <div class="contentList"></div>
+    </main>
     <footer>
+      <div id="pageButtons">
+        <button class="buttons" id="previousPage" onclick="previousPage()">voltar pág.</button>
+        <button class="buttons" id="nextPage" onclick="nextPage()">próx. pág.</button>
+      </div>
+      <p id="pageNumber"></p>
       <p id="credits">Desenvolvido por <span>Eduardo M. S. Ribas</span> em 2024</p>
     </footer>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
