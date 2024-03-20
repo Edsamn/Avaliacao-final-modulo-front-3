@@ -14,7 +14,7 @@ const renderOnDisplay = (character) => {
     `;
 
   userCardText.innerHTML = `
-  <h3> ${character.name} </h3>
+    <h3> ${character.name} </h3>
     <p> ${character.status} - ${character.species} </p>
     <p> <span>Última localização conhecida</span> </p>
     <p> ${character.location.name} </p>

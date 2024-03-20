@@ -60,14 +60,14 @@ main {
   border-radius: 5px;
   margin: 1rem;
   width: 400px;
-  height: 230px;
+  height: 250px;
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
 .userCard img {
-  height: 230px;
+  height: 250px;
   width: 170px;
   border-radius: 5px;
 }
@@ -78,10 +78,11 @@ main {
 }
 
 .userCardText {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: left;
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+  margin-left: 10px;
 }
 
 .userCard p,
@@ -98,7 +99,7 @@ h3 {
 footer {
   background-color: rgb(28, 58, 25);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   padding-bottom: 10px;
