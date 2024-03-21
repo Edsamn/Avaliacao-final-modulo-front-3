@@ -15,7 +15,6 @@ const renderOnDisplay = (character) => {
   userCardImage.innerHTML = `
     <img src='${character.image}' alt=''>
     `;
-
   userCardText.innerHTML = `
     <h3> ${character.name} </h3>
     <p> ${character.status} - ${character.species} </p>
@@ -32,32 +31,35 @@ const renderOnDisplay = (character) => {
 
 async function getCharacters() {
   try {
-    const response = await api.get(`/character?page=${initialPage}`);
+    const response = await api.get(`/character/?page=${initialPage}`);
     const characters = response.data.results;
     characters.forEach((character) => {
       renderOnDisplay(character);
     });
     pageNumber.textContent = `Página atual: ${initialPage}`;
   } catch (error) {
-    console.log(error);
+    characterContainer.innerHTML = `
+    <h2>Ocorreu um erro. ${error}</h2>
+    `;
   }
 }
 getCharacters();
 
 async function getCharactersByName() {
   try {
-    const response = await api.get(`/character?name=${nameValue}`);
+    const response = await api.get(`/character/?name=${nameValue}`);
     const characters = response.data.results;
-    console.log(characters);
+
     characterContainer.innerHTML = "";
 
-    characters.filter((character) => {
-      character.name.includes(`${nameValue}`).forEach((character) => {
-        renderOnDisplay(character);
-      });
+    characters.forEach((character) => {
+      renderOnDisplay(character);
     });
+    nameValue.innerHTML = "";
   } catch (error) {
-    console.log(error);
+    characterContainer.innerHTML = `
+    <h2>Ocorreu um erro. ${error}</h2>
+    `;
   }
 }
 

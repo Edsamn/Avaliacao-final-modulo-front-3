@@ -13,10 +13,10 @@
         <img id="iconHeader" src="./assets/RICK_MORTY_ICON.png" alt="Ícone pequeno redondo do Rick and Morty" />
       </div>
       <h1>API de Rick and Morty</h1>
-      <form>
-        <input type="text" id="headerForm" placeholder="ex.: Morty" size="43px" />
+      <div>
+        <input type="text" id="headerForm" placeholder="ex.: Morty" size="39px" />
         <button onclick="getCharactersByName()">Pesquisar</button>
-      </form>
+      </div>
       <div id="pageButtons">
         <button class="buttons" id="previousPage" onclick="previousPage()">voltar pág.</button>
         <button class="buttons" id="nextPage" onclick="nextPage()">próx. pág.</button>
@@ -26,6 +26,11 @@
       <div class="contentList"></div>
     </main>
     <footer>
+      <div id="info">
+        <p>PERSONAGENS: 826</p>
+        <p>lOCALIZAÇÕES: 126</p>
+        <p>EPISÓDIOS: 51</p>
+      </div>
       <div id="pageButtons">
         <button class="buttons" id="previousPage" onclick="previousPage()">voltar pág.</button>
         <button class="buttons" id="nextPage" onclick="nextPage()">próx. pág.</button>

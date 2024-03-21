@@ -33,7 +33,7 @@ header {
   display: flex;
   margin: 10px 0 10px 0;
   width: 200px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 h1 {
@@ -91,21 +91,29 @@ h3 {
   color: white;
 }
 
-.userCard span,
-#credits {
-  color: gray;
-}
-
 footer {
   background-color: rgb(28, 58, 25);
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
-#pageNumber {
+#info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+#info p {
+  padding: 0 30px 0 30px;
+}
+
+#pageNumber,
+#info p,
+.userCard span,
+#credits {
   margin: 10px 0 10px 0;
   color: gray;
 }
